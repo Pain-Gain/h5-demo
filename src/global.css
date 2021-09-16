@@ -1,0 +1,57 @@
+/* // @import "./styles/hairline.less"; */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+}
+
+.main {
+  padding-bottom: 10vh;
+  overflow: hidden;
+  font-size: 0.16rem;
+}
+
+.home-title {
+  margin-left: 1.59rem;
+  margin-top: 0.29rem;
+  margin-bottom: 0.17rem;
+  width: 0.72rem;
+  color: rgba(16, 16, 16, 100);
+  font-size: 0.18rem;
+  font-weight:bold;
+  text-align: left;
+  font-family: PingFangSC-regular;
+}
+.home-button {
+  margin-left: 1.59rem;
+  width: 0.74rem;
+  color: rgba(80, 120, 255, 100);
+  font-size: 0.14rem;
+  font-weight:bold;
+  text-align: left;
+  font-family: PingFangSC-regular;
+}
+
+
+.content {
+  margin-left: 0.51rem;
+  margin-top: 0.35rem;
+  width: 2.82rem;
+  height: 3.10rem;
+  color: rgba(16, 16, 16, 100);
+  font-size: 0.14rem;
+  font-weight:bold;
+  line-height: 0.22rem;
+  text-align: left;
+  font-family: PingFangSC-regular;
+}
+.details {
+  text-indent:2em;
+}
+
+

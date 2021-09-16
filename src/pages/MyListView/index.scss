@@ -1,0 +1,76 @@
+.list-box {
+  padding: 0.13rem 0.24rem 0.13rem 0.21rem;
+  display: flex;
+  justify-content: space-between;
+}
+.list-img {
+  height: 1.01rem;
+  width: 1.3rem;
+}
+
+.list-box-1 {
+  width: 1.8rem;
+  margin-left: 0.20rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.list-title {
+  margin-top: 0.09rem;
+  font-size: 0.18rem;
+  font-weight: bold;
+  color: rgba(16, 16, 16, 100);
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  text-overflow: ellipsis;
+  overflow: hidden;
+
+}
+.list-box-2 {
+  width: 1.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.list-author, .list-date {
+  color: rgba(16, 16, 16, 100);
+  font-size: 0.14rem;
+  font-weight:bold;
+  text-align: left;
+  font-family: PingFangSC-regular;
+}
+
+
+
+.box {
+  margin-left: 1.03rem;
+  margin-right: 0.74rem;
+  margin-top: 0.12rem;
+  margin-bottom: 0.24rem;
+  display: flex;
+  justify-content: space-between;
+}
+.Detail-tag {
+  margin-left: 1.50rem;
+  margin-right: 1.32rem;
+  width: 0.93rem;
+  position: relative;
+  top: 0.22rem;
+  text-align: center;
+  background-color: white;
+}
+.Detail-digest {
+  /* padding-top: 37rem; */
+  margin-top: 0.15rem;
+  margin-left: 0.37rem;
+  margin-right: 0.25rem;
+  padding: 0.28rem 0.17rem 0.21rem 0.26rem;
+  width: 0.270rem;
+  border: solid 0.1rem black;
+}
+
+.details {
+  text-indent:2em;
+}

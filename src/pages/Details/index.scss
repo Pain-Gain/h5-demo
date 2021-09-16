@@ -1,0 +1,68 @@
+.Detail-title {
+
+  /* margin-left: 131px; */
+  margin-top: 0.24rem;
+  margin-bottom: 0.12rem;
+  /* width: 72px; */
+  color: rgba(16, 16, 16, 100);
+  font-size: 0.18rem;
+  font-weight:bold;
+  text-align:center;
+  font-family: PingFangSC-regular;
+}
+.Detail-author, .Detail-date{
+  /* margin-left: 159px;
+  width: 74px; */
+  color: rgba(16, 16, 16, 100);
+  font-size: 0.14rem;
+  font-weight:bold;
+  text-align: left;
+  font-family: PingFangSC-regular;
+}
+.box {
+  margin-left: 1.03rem;
+  margin-right: 0.74rem;
+  margin-top: 0.12rem;
+  margin-bottom: 0.24rem;
+  display: flex;
+  justify-content: space-between;
+}
+.Detail-img {
+  margin-left: 1.01rem;
+  margin-right: 0.74rem;
+  width: 2rem;
+  height: 1.2rem;
+}
+.Detail-tag {
+  margin-left: 1.5rem;
+  margin-right: 1.32rem;
+  width: 0.93rem;
+  position: relative;
+  top: 0.22rem;
+  text-align: center;
+  background-color: white;
+}
+.Detail-digest {
+  /* padding-top: 37px; */
+  margin-top: 0.15rem;
+  margin-left: 0.37rem;
+  margin-right: 0.25rem;
+  padding: 0.28rem 0.17rem 0.21rem 0.26rem;
+  width: 2.7rem;
+  border: solid 0.01rem black;
+}
+
+.Detail-content {
+  margin-left: 0.37rem;
+  margin-top: 0.24rem;
+  width: 3.08rem;
+  color: rgba(16, 16, 16, 100);
+  font-size: 0.14rem;
+  font-weight:bold;
+  line-height: 0.22rem;
+  text-align: left;
+  font-family: PingFangSC-regular;
+}
+.details {
+  text-indent:2em;
+}
