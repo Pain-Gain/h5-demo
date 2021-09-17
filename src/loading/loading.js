@@ -1,4 +1,4 @@
-import { Toast, WhiteSpace, WingBlank, Button } from 'antd-mobile';
+import { Toast, WingBlank, Button } from 'antd-mobile';
 
 
 function loadingToast() {

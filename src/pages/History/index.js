@@ -7,69 +7,74 @@ import {adapterFun} from '../../tool';
 import MyTabs from '../MyTables';
 import './index.scss'
 
-function MyBody(props) {
-  return (
-    // <MyTabs>
-    //   {props.children}
-    // </MyTabs>
-    <div className="am-list-body my-body">
-      <span style={{ display: 'none' }}>you can custom body wrap element</span>
-      {props.children}
-    </div>
-  );
-}
 
-
-const listData = [
-  {
-    id: '0',
-    type: 'photo',
-    img: 'https://zos.alipayobjects.com/rmsportal/dKbkpPXKfvZzWCM.png',
-    title: '标题一占位文字',
-    date: '2019-12-12',
-    author: '普益标准',
-  },
-  {
-    id: '1',
-    type: 'digest',
-    title: '标题二占位文字',
-    digest: '摘要占位文字，摘要占位文字摘要占位文字摘要占位文字摘要占位文字摘要占位文字摘要占位文字摘要占位文字',
-  },
-  {
-    id: '2',
-    type: 'brief',
-    title: '标题三占位文字',
-  },
-];
-const NUM_SECTIONS = 3;
-const NUM_ROWS_PER_SECTION = 5;
-let pageIndex = 0;
-
-const dataBlobs = {}; //数据
-let sectionIDs = [];  //选中行
-let rowIDs = [];
-function genData(pIndex = 0) {
-  for (let i = 0; i < NUM_SECTIONS; i++) {
-    const ii = (pIndex * NUM_SECTIONS) + i;
-    const sectionName = `${ii}`;
-    sectionIDs.push(sectionName);
-    dataBlobs[sectionName] = sectionName;
-    rowIDs[ii] = [];
-
-    for (let jj = 0; jj < NUM_ROWS_PER_SECTION; jj++) {
-      const rowName = `${jj}`;
-      rowIDs[ii].push(rowName);
-      dataBlobs[rowName] = rowName;
-    }
-  }
-  sectionIDs = [...sectionIDs];
-  rowIDs = [...rowIDs];
-  // console.log('sectionIDs',sectionIDs);
-  // console.log('rowIDs',rowIDs);
-
-}
 
 const HistoryList = (props) => {
+
+
+
+  const MyBody = (props) => {
+    return (
+      // <MyTabs>
+      //   {props.children}
+      // </MyTabs>
+      <div className="am-list-body my-body">
+        <span style={{ display: 'none' }}>you can custom body wrap element</span>
+        {props.children}
+      </div>
+    );
+  }
+  
+  
+  const listData = [
+    {
+      id: '0',
+      type: 'photo',
+      img: 'https://zos.alipayobjects.com/rmsportal/dKbkpPXKfvZzWCM.png',
+      title: '标题一占位文字',
+      date: '2019-12-12',
+      author: '普益标准',
+    },
+    {
+      id: '1',
+      type: 'digest',
+      title: '标题二占位文字',
+      digest: '摘要占位文字，摘要占位文字摘要占位文字摘要占位文字摘要占位文字摘要占位文字摘要占位文字摘要占位文字',
+    },
+    {
+      id: '2',
+      type: 'brief',
+      title: '标题三占位文字',
+    },
+  ];
+  const NUM_SECTIONS = 3;
+  const NUM_ROWS_PER_SECTION = 5;
+  let pageIndex = 0;
+  
+  const dataBlobs = {}; //数据
+  let sectionIDs = [];  //选中行
+  let rowIDs = [];
+  const genData = (pIndex = 0) => {
+    // console.log('historyGenData+++++++++++++++++++++++');
+    for (let i = 0; i < NUM_SECTIONS; i++) {
+      const ii = (pIndex * NUM_SECTIONS) + i;
+      const sectionName = `${ii}`;
+      sectionIDs.push(sectionName);
+      dataBlobs[sectionName] = sectionName;
+      rowIDs[ii] = [];
+  
+      for (let jj = 0; jj < NUM_ROWS_PER_SECTION; jj++) {
+        const rowName = `${jj}`;
+        rowIDs[ii].push(rowName);
+        dataBlobs[rowName] = rowName;
+      }
+    }
+    sectionIDs = [...sectionIDs];
+    rowIDs = [...rowIDs];
+    // console.log('sectionIDs',sectionIDs);
+    // console.log('rowIDs',rowIDs);
+  
+  }
 
   const getSectionData = (dataBlob, sectionID) => dataBlob[sectionID];
   const getRowData = (dataBlob, sectionID, rowID) => dataBlob[rowID];
@@ -141,13 +146,14 @@ const HistoryList = (props) => {
   let index = listData.length - 1;
   //列表项渲染
   const row = (rowData, sectionID, rowID) => {
+    // console.log('-----------------rowData', rowData);
     if (index < 0) {
       index = listData.length - 1;
     }
     const obj = listData[index--];
     const ListId = NUM_ROWS_PER_SECTION * sectionID + rowID
     if(obj.type == "photo"){
-      console.log(`S${sectionID}, R${rowID}  ${obj.type}`);
+      // console.log(`S${sectionID}, R${rowID}  ${obj.type}`);
       return (
         <div key={`S${sectionID}, R${rowID}`} >
         <div onClick={(e) => this.renderDetail(ListId, e)} className='photo-list-box' >
@@ -163,7 +169,7 @@ const HistoryList = (props) => {
       </div>
       );
     } else if(obj.type == "digest") {
-      console.log(`S${sectionID}, R${rowID}  ${obj.type}`);
+      // console.log(`S${sectionID}, R${rowID}  ${obj.type}`);
       return (
         <div key={`S${sectionID}, R${rowID}`} >
           <div onClick={(e) => renderDetail(ListId, e)} className='digest-list-box' >
@@ -173,7 +179,7 @@ const HistoryList = (props) => {
         </div>
       );
     } else if(obj.type == "brief") {
-      console.log(`S${sectionID}, R${rowID}  ${obj.type}`);
+      // console.log(`S${sectionID}, R${rowID}  ${obj.type}`);
       return (
         <div key={`S${sectionID}, R${rowID}`} >
           <div onClick={(e) => renderDetail(ListId, e)} className='brief-list-box' >

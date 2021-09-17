@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
-import axios from '../../axios/index'
-import {adapterFun} from '../../tool'
+import axios from '../../../axios/index'
+import {adapterFun} from '../../../tool'
 import './index.scss';
 
 

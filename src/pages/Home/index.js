@@ -16,7 +16,7 @@ const Home = () => {
     <div>
       <p className="home-title">说明页面</p>
       {/* <p className="home-button" >前往 demo</p> */}
-      <Link to="/demo" className="home-button">前往 demo</Link>
+      <Link to="/menu" className="home-button">前往 demo</Link>
       {/* <a className="home-button" onClick = {e => goMenuBar(props)}>前往 demo</a> */}
       <div className="content">
         <p >1.首先需要对本需求至少提出5处以上疑问。</p>

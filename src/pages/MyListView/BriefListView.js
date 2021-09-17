@@ -6,6 +6,8 @@ import { ListView } from 'antd-mobile';
 import {adapterFun} from '../../tool';
 import MyTabs from '../MyTables';
 import './index.scss'
+import { useHistory } from "react-router-dom";
+
 
 function MyBody(props) {
   return (
@@ -130,9 +132,19 @@ const BriefListView = (props) => {
     />
   );
 
-  const renderDetail = (ListId) =>{
+  let history = useHistory();
 
+  const renderDetail = (ListId) =>{
+    history.push({
+      pathname: '/BriefDetail',
+      state:{
+        id: ListId,
+        type: 'brief'
+      }
+    });
   }
+
+
  
   let index = listData.length - 1;
   //列表项渲染

@@ -60,6 +60,34 @@ app.get("/baseDate", function (req, res) {
   res.json(data);
 });
 
+app.get("/photoList", function (req, res) {
+  const { result } = Mock.mock({
+    "result":{
+      "list|10": [
+        {
+          "id|+1": 0,
+          "type": 'photo',
+          "title|+1": [
+            "标题一占位文字", "标题二占位文字", "标题三占位文字",
+            "标题四占位文字","标题五占位文字标题五占位文字标题五占位文字标题五占位文字","标题一占位文字",
+            "标题一占位文字", "标题一占位文字", "标题一占位文字",
+            "标题一占位文字"],
+        "img": 'https://zos.alipayobjects.com/rmsportal/XmwCzSeJiqpkuMB.png',
+        "date": '2019-12-12',
+        "author": '普益标准',
+        "releaseYear|1900-2021": 1,
+        },
+      ],
+      "page": 1,
+      "page_size": 10,
+      "total_count": 30,
+      "page_count": 3,
+      }
+  })
+  const data = new SuccessRes(result);
+  res.json(data);
+});
+
 
 
 app.get("/detail", function (req, res) {

@@ -4,6 +4,9 @@ import Readme from "./components/Readme.js";
 import Home from './pages/Home';
 import MenuBar from './pages/Menu';
 import MyTabs from './pages/MyTables';
+import PhotoDetailView from './pages/DetailView/PhotoDetailView';
+import DigestDetailView from './pages/DetailView/DigestDetailView';
+import BriefDetailView from './pages/DetailView/BriefDetailView';
 import Demo from "./components/Demo.js";
 import KeepAlive, { AliveScope }  from "react-activation";
 
@@ -17,10 +20,19 @@ function App() {
           <Route path="/home">
             <Home />
           </Route>
-          <Route path="/demo">
+          <Route path="/menu">
             <KeepAlive>
               <MenuBar />
             </KeepAlive>
+          </Route>
+          <Route path="/PhotoDetail">
+            <PhotoDetailView />
+          </Route>
+          <Route path="/DigestDetail">
+            <DigestDetailView />
+          </Route>
+          <Route path="/BriefDetail">
+            <BriefDetailView />
           </Route>
           <Route path="/">
             <Home />

@@ -6,6 +6,7 @@ import { ListView } from 'antd-mobile';
 import {adapterFun} from '../../tool';
 import MyTabs from '../MyTables';
 import './index.scss'
+import { useHistory } from "react-router-dom";
 
 function MyBody(props) {
   return (
@@ -133,8 +134,15 @@ const DigestListView = (props) => {
     />
   );
 
+  let history = useHistory();
   const renderDetail = (ListId) =>{
-
+    history.push({
+      pathname: '/DigestDetail',
+      state:{
+        id: ListId,
+        type: 'digest'
+      }
+    });
   }
  
   let index = listData.length - 1;
