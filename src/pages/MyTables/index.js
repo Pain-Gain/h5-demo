@@ -1,6 +1,8 @@
 import React from 'react';
 import { Tabs, WhiteSpace } from 'antd-mobile';
-import MyListView from '../MyListView/test';
+import PhotoListView from '../MyListView/PhotoListView';
+import DigestListView from '../MyListView/DigestListView';
+import BriefListView from '../MyListView/BriefListView';
 import '../../../node_modules/antd-mobile/dist/antd-mobile.min.css';
 
 
@@ -16,13 +18,13 @@ const MyTabs = () => {
     <div >
       <Tabs tabs={tabs} initialPage={0} animated={false} useOnPan={false}>
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: 'auto', backgroundColor: '#fff' }}>
-        <MyListView />
+          <PhotoListView />
         </div>
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: 'auto', backgroundColor: '#fff' }}>
-          {/* Content of second tab */}
+          <DigestListView />
         </div>
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: 'auto', backgroundColor: '#fff' }}>
-          Content of third tab
+          <BriefListView />
         </div>
       </Tabs>
     </div>

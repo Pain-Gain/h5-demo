@@ -4,7 +4,9 @@ import React, {useState, useEffect} from 'react';
 // import axios from '../../axios/index'
 // import './index.css';
 import MyTabs from '../MyTables';
+import HistoryList from '../History';
 import MenuNavBar from '../MyNavBar/MenuNavBar';
+import HistoryNavBar from '../MyNavBar/HistoryNavBar';
 import '../../../node_modules/antd-mobile/dist/antd-mobile.min.css';
 import liulanjilu from "../../icon/liulanjilu.png"
 import liulanjilu1 from "../../icon/liulanjilu1.png"
@@ -24,7 +26,6 @@ const MenuBar = () => {
     if(pageText == 'content') {
       return (
         <div >
-          
           <MenuNavBar />
           <MyTabs />
           {/* MenuBar test!!!! */}
@@ -33,8 +34,8 @@ const MenuBar = () => {
     }else if(pageText == 'history'){
       return (
         <div >
-          MenuBar test!!!!
-          History page!!!!
+          <HistoryNavBar />
+          <HistoryList />
         </div>
       );
     }
