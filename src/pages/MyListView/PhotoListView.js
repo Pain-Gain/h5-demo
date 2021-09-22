@@ -49,12 +49,8 @@ const listData = [
 ];
 
 
-
-
-
 const PhotoListView = (props) => {
 
-  
 
   const getSectionData = (dataBlob, sectionID) => dataBlob[sectionID];
   const getRowData = (dataBlob, sectionID, rowID) => dataBlob[rowID];
@@ -83,9 +79,12 @@ const PhotoListView = (props) => {
     pageSize: 10 
   }
   function getReqData(props) {
-    setReqData(props);
+    const {list} = props;
+    console.log("list",list);
+    setReqData(list);
     setIsRequesting(false);
     console.log("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")
+    console.log("reqData",reqData);
     Toast.hide();
     
   }
@@ -189,6 +188,7 @@ const PhotoListView = (props) => {
     const obj = listData[index--];
     const ListId = NUM_ROWS_PER_SECTION * sectionID + rowID
     return (
+      isRequesting? <div/> : 
       <div key={`S${sectionID}, R${rowID}`} >
         <div onClick={(e) => renderDetail(ListId, e)} className='photo-list-box' >
           <img className='photo-list-img' src={obj.img} alt="" />
@@ -205,7 +205,6 @@ const PhotoListView = (props) => {
   };
 
   return (
-      // isRequesting? <div/> : 
     <ListView
       ref={el => refContainer = el}
       dataSource={data}

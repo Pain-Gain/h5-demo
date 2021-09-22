@@ -1,0 +1,57 @@
+.Filter-body {
+  width: 100%;
+  height: 100%;
+  font-size: 0.14rem;
+  line-height: 0.26rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: white;
+}
+.Input-Area {
+  margin: 0.84rem 0.4rem 0 0.58rem;
+}
+.Deadline, .TitleSearch, .Type{
+  width: 100%;
+  margin-bottom: 0.28rem;
+  display: flex;
+  justify-content: space-between;
+}
+.Deadline-DatePicker, .TitleSearch-TextareaItem {
+  width: 1.96rem;
+  height: 0.26rem;
+  border: solid 0.01rem #bbbbbb;
+  line-height: 0.26rem;
+  text-align: center;
+}
+.Type-Lab {
+  width: 0.7rem;
+  overflow-wrap: break-word;
+  // text-align: center;
+}
+.Type-Button-Box-1 {
+  width: 1.96rem;
+  display: flex;
+  justify-content: space-between;
+  // text-align: center;
+}
+.Type-Button {
+  width: 0.93rem;
+  height: 0.26rem;
+  margin-bottom: 0.1rem;
+  border: solid 0.01rem #bbbbbb;
+  text-align: center;
+  font-size: 0.14rem;
+  line-height: 0.26rem;
+}
+.Submit {
+  height: 0.49rem;
+}
+.Submit-Button {
+  width: 50%;
+  height: 0.49rem;
+  border: solid 0.01rem #bbbbbb;
+  text-align: center;
+}
+
+

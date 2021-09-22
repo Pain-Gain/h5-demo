@@ -1,3 +1,4 @@
+import React, { useState, useEffect, useRef } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Readme from "./components/Readme.js";
@@ -7,10 +8,17 @@ import MyTabs from './pages/MyTables';
 import PhotoDetailView from './pages/DetailView/PhotoDetailView';
 import DigestDetailView from './pages/DetailView/DigestDetailView';
 import BriefDetailView from './pages/DetailView/BriefDetailView';
-import Demo from "./components/Demo.js";
+import HistoryDetailView from './pages/History/HistoryDetailView';
+import Filter from './pages/Filter/test';
+import {adapterFun} from './tool';
+// import Demo from "./components/Demo.js";
+import Demo from "./pages/Filter";
 import KeepAlive, { AliveScope }  from "react-activation";
 
 function App() {
+  useEffect(() => {
+    adapterFun(375);
+  }, []);
   return (
     <AliveScope>
       <Router>
@@ -33,6 +41,12 @@ function App() {
           </Route>
           <Route path="/BriefDetail">
             <BriefDetailView />
+          </Route>
+          <Route path="/historyDetail">
+            <HistoryDetailView />
+          </Route>
+          <Route path="/Filter">
+            <Filter />
           </Route>
           <Route path="/">
             <Home />

@@ -12,7 +12,7 @@ return (
     // icon={<Icon type="left" />}
     // onLeftClick={() => console.log('onLeftClick')}
     rightContent={[
-      <i onClick={() => history.push('/home')} className="iconfont icon-shaixuan" style={{ color: "#101010",fontSize: "18px" }}></i>
+      <i onClick={() => history.push('/Filter')} className="iconfont icon-shaixuan" style={{ color: "#101010",fontSize: "18px" }}></i>
       // <Icon key="0" type="search" style={{ marginRight: '16px' }} />,
       // <Icon key="1" type="ellipsis" />,
     ]}
